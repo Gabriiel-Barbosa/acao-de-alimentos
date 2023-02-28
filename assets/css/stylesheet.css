@@ -1,0 +1,80 @@
+/*Paleta de Cores*/
+:root{
+    --corde-fundo:#FFFFFF;
+    --branco-fonte:#FFFFFF;
+    --azul-primario:#ABAEB1;
+    --amarelo-primario:#EEC2A5;
+    --laranja-primario:#C9796E;
+    --marron-secudario:#725E60;
+}
+/*Navecação Home*/
+.cabecalho{
+    background-color: var(--marron-secudario);
+    height: 80px;
+}
+.cabecalho__sistema{
+    font-size: 35px;
+    color: var(--branco-fonte);
+    text-align: center;
+    padding: 10px;
+
+}
+
+/*Opções do Sistema Página Home*/
+.processos__direito-civil{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.processos__card{
+    text-align: center;
+    background-color: var(--amarelo-primario);
+    border: solid 2px var(--marron-secudario);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    color:var(--marron-secudario);
+}
+.processo__card-titulo{
+    font-size: 20px;
+    margin: 2px;
+    color:var(--marron-secudario); 
+}
+.processo__card-status{
+    font-size: 15px;
+    margin: 1.5px; 
+    color:var(--marron-secudario);
+     
+}
+
+/*Processos */
+.adicionar_processo{
+    margin: 10px;
+}
+.lista__processos-titulo{
+    margin: 10px;
+    font-size: 20px;  
+}
+.lista__processos-conteudo{
+    width: auto;
+    height: 450px;
+    overflow: auto;
+    margin: 10px;
+    background-color: var(--amarelo-primario);
+    border: solid 2px var(--marron-secudario);
+    border-radius: 10px;
+}
+.lista__processos-conteudo-processo{
+    background-color: var(--laranja-primario);
+    color: var(--branco-fonte);
+    border-bottom: solid  #725E60;
+}
+.lista__processos-conteudo-processo-titulo{
+    font-size: 20px;
+    padding: 5px;
+}
+.lista__processos-conteudo-processo-titulo-status-motivo, .lista__processos-conteudo-processo-titulo-status,.lista__processos-conteudo-processo-sigilo{
+    padding: 5px;    
+}

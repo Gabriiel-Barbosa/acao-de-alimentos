@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Processo</title>
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/stylesheet.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+
+        <div class="cabecalho__sistema">
+            <h1 class="cabecalho__sistema-titulo">Cadastro de Processo</h1>
+        </div>
+        <nav class="navegacao">
+            
+        </nav>
+    </header>
+    <main>
+        <section>
+            <form action="">
+                <fieldset class="dados__processo">
+                    <legend>Dados do Processo</legend>
+                    <label for="numero-processo">Número de processo:</label>
+                    <input type="text" id="numero-processo" name="numero-processo">
+
+                    <div class="segredo-justica">
+                        <h2>É segredo de Justiça?</h2>
+                        <fieldset>
+                          <label for="sim">Sim:</label>
+                          <input type="radio" id="sim" name="segredo" value="sim">
+                      
+                          <label for="nao">Não:</label>
+                          <input type="radio" id="nao" name="segredo" value="nao">
+                        </fieldset>
+                      </div>
+                      <label for="ano-processo">Ano do Processo:</label>
+                      <select id="ano-processo" name="ano-processo">
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                      </select>
+                </fieldset>
+                <fieldset class="dados__processo">
+
+                    <div class="dados__processo-procuracao">
+                        <h2>Tem Procuração? </h2>
+                        <fieldset class="dados__processo-procuracao-form">
+                          <label for="sim">Sim:</label>
+                          <input type="radio" id="sim" name="pcocuracao" value="sim">
+                      
+                          <label for="nao">Não:</label>
+                          <input type="radio" id="nao" name="pcocuracao" value="nao">
+                        </fieldset>
+                          <!-- Alerta que vai disparar o texto pra emendar a emenda-->
+                        <h2>Trata-se de Relativamente incapaz ?</h2>
+                        <fieldset class="dados__processo-procuracao-form">
+                            <label for="sim">Sim:</label>
+                            <input type="radio" id="sim" name="menor-incapaz" value="sim">
+                        
+                            <label for="nao">Não:</label>
+                            <input type="radio" id="nao" name="menor-incapaz" value="nao">
+                        </fieldset>
+                        <h2>Tem assinatura do relativamente incapaz?</h2>
+                         <!-- Esse formulário Será dinâmico (Só vai aparecer se for sim no de cima)-->
+                        <fieldset class="dados__processo-procuracao-form">
+                            <label for="sim">Sim:</label>
+                            <!-- -->
+                            <input type="radio" id="sim" name="menor-incapaz-assinatura" value="sim">
+                        
+                            <label for="nao">Não:</label>
+                            <!--lerta que vai disparar o texto relativo a falta de assinatura-->
+                            <input type="radio" id="nao" name="menor-incapaz-assinatura" value="nao">
+                        </fieldset>
+                        
+                      </div>
+
+                      <div class="dados__processo-quitacao-custas">
+
+                        <h2>Quitadas?</h2>
+                         <!-- -->
+                        <fieldset class="dados__processo-quitacao-custas-form">
+                            <label for="sim">Sim:</label>
+                            <!-- Existe Pendências ?-->
+                            <input type="radio" id="quitadas-sim" name="quitacao-custas" value="sim">
+                        
+                            <label for="nao">Não:</label>
+                            <!--Aparece as opções  parcialmente quitadas-->
+                            <input type="radio" id="quitadas-nao" name="quitacao-custas" value="nao">
+                        </fieldset>
+
+                        <h2>Quitadas Parcialmente?</h2>
+                         <!-- -->
+                        <fieldset class="dados__processo-quitacao-custas-form">
+                            <label for="sim">Sim:</label>
+                            <!-- Alerta de Texto JS -->
+                            <input type="radio" id="quitadas-parcialmente-sim" name="quitas-parcialmente-custas" value="sim">
+                        
+                            <label for="nao">Não:</label>
+                            <!-- Não Faz Nada -->
+                            <input type="radio" id="quitadas-parcialmente-nao" name="quitas-parcialmente-custas" value="nao">
+                        </fieldset>
+
+                        <h2>Pedido de gratuidade da justiça!</h2>
+                         <!-- -->
+                        <fieldset class="dados__processo-gratuidade-justica-form">
+                            <label for="sim">Sim:</label>
+                            <!-- Existe Pendências ?-->
+                            <input type="radio" id="gratuidade-sim" name="gratuidade-justica-custas" value="sim">
+                        
+                            <label for="nao">Não:</label>
+                            <!--Aparece as opções  parcialmente quitadas-->
+                            <input type="radio" id="gratuidade-nao" name="gratuidade-justica-custas" value="nao">
+                        </fieldset>
+
+                        <h2>Pobreza Presumida?</h2>
+                         <!-- Só aparece se clicar no sim de pedido de gratuidade-->
+                        <fieldset class="dados__processo-quitacao-custas-form">
+                            <label for="sim">Sim:</label>
+                            <!-- Existe Pendências ?-->
+                            <input type="radio" id="quitadas-sim" name="quitacao-custas" value="sim">
+                        
+                            <label for="nao">Não:</label>
+                            <!-- Texto Enorme que será resumido pra gente de gente poder ler -->
+                            <input type="radio" id="quitadas-nao" name="quitacao-custas" value="nao">
+                        </fieldset>
+                        
+                        <h2>Não Quitada e nem Pede Gratuidade?</h2>
+                         <!-- -->
+                        <fieldset class="dados__processo-quitacao-custas-form">
+                            <label for="sim">Sim:</label>
+                            <!-- Alerta! exto Enorme que será resumido pra gente de gente poder ler -->
+                            <input type="radio" id="quitadas-sim" name="quitacao-custas" value="sim">
+                        
+                            <label for="nao">Não:</label>
+                            <!-- Não faz nada-->
+                            <input type="radio" id="quitadas-nao" name="quitacao-custas" value="nao">
+                        </fieldset>
+
+                      </div>
+
+                      <div class="dados__processo-legitimidade-ativa">
+
+                        <h2>Pedido em nome próprio?</h2>
+                         <!-- -->
+                        <fieldset class="dados__processo-legitimidade-ativa-form">
+                            <label for="sim">Sim:</label>
+                            <!-- Texto blabla?-->
+                            <input type="radio" id="legitimidade-sim" name="legitimidade-ativa" value="sim">
+                        
+                            <label for="nao">Não:</label>
+                            <!--Existem pedências-->
+                            <input type="radio" id="legitimidade-nao" name="qlegitimidade-ativa" value="nao">
+                        </fieldset>
+                      </div>
+
+                      <div class="dados__processo-prova-relacao-parentesco">
+
+                        <h2>Existe prova da Relação de Parentesco?</h2>
+                         <!-- -->
+                        <fieldset class="dados__processo-prova-relacao-parentesco-form">
+                            <label for="sim">Sim:</label>
+                            <!-- Existem pedências-->
+                            <input type="radio" id="parentesco-sim" name="prova-relacao-parentesco" value="sim">
+                        
+                            <label for="nao">Não:</label>
+                            <!-- Texto blablabla-->
+                            <input type="radio" id="parentesco-nao" name="prova-relacao-parentesco" value="nao">
+                        </fieldset>
+                      </div>
+
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
