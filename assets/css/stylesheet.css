@@ -6,21 +6,56 @@
     --amarelo-primario:#EEC2A5;
     --laranja-primario:#C9796E;
     --marron-secudario:#725E60;
+    --preto-primario:#000000;
+}
+  
+  
+/*Navegação Geral*/
+.navegacao-links{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navegacao-links-opcoes{
+    margin: 10px;
+    color: var(--branco-fonte);
+    font-size: larger;
+    border: solid var(--laranja-primario) 1.5px;
+    border-radius: 4.5px;
+    padding: 0px 5px;
 }
 /*Navecação Home*/
+
+
 .cabecalho{
     background-color: var(--marron-secudario);
-    height: 80px;
+    height: 95px;
 }
 .cabecalho__sistema{
+
     font-size: 35px;
     color: var(--branco-fonte);
     text-align: center;
-    padding: 10px;
+    padding: 2.5px;
 
 }
 
 /*Opções do Sistema Página Home*/
+.processos__categoria{
+    border: solid var(--marron-secudario) 2.5px;
+    border-radius: 10px;
+    margin: 10px;
+    
+}
+.card-icone{
+    width:100%;
+    text-align: center;
+}
+.processos__categoria-titulo{
+    font-size: 22px;
+    margin: 10px;
+    margin-left: 22px;
+}
 .processos__direito-civil{
     display: flex;
     justify-content: space-evenly;
@@ -30,28 +65,32 @@
 
 .processos__card{
     text-align: center;
-    background-color: var(--amarelo-primario);
     border: solid 2px var(--marron-secudario);
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
+    width: 125px;
+    height: 200px;
     color:var(--marron-secudario);
 }
 .processo__card-titulo{
-    font-size: 20px;
-    margin: 2px;
-    color:var(--marron-secudario); 
+    font-size: larger;
+    margin: 5px 0px;
 }
-.processo__card-status{
-    font-size: 15px;
-    margin: 1.5px; 
-    color:var(--marron-secudario);
-     
+.processos__card:hover{
+    color: var(--branco-fonte);
+    border-color: var(--amarelo-primario);
+    color: var(--laranja-primario);
+    
 }
+
 
 /*Processos */
 .adicionar_processo{
     margin: 10px;
+    border: solid var(--laranja-primario) 1.5px;
+    border-radius: 4.5px;
+    padding: 5px;
 }
 .lista__processos-titulo{
     margin: 10px;
@@ -67,9 +106,14 @@
     border-radius: 10px;
 }
 .lista__processos-conteudo-processo{
-    background-color: var(--laranja-primario);
-    color: var(--branco-fonte);
+    background-color: var(--branco-fonte);
+    color: var(--preto-primario);
     border-bottom: solid  #725E60;
+}
+.lista__processos-conteudo-processo:hover{
+    background-color: var(--marron-secudario);
+    color: var(--branco-fonte);
+
 }
 .lista__processos-conteudo-processo-titulo{
     font-size: 20px;
@@ -78,3 +122,78 @@
 .lista__processos-conteudo-processo-titulo-status-motivo, .lista__processos-conteudo-processo-titulo-status,.lista__processos-conteudo-processo-sigilo{
     padding: 5px;    
 }
+
+/*Formulário Adicionar Processo Ação de Alimentos*/
+.formulario{
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    max-width: 500px;
+    align-items: center;
+    border: solid var(--marron-secudario) 5px;
+    border-radius: 10px;
+}
+
+/*Titulos e Inputs Personalizados*/
+.dados__processo-titulo{
+    font-size: 25px;
+    padding: 15px;
+}
+.dados__processo-input{
+    border: solid var(--marron-secudario) 2.5px;
+    border-radius: 5px;
+}
+
+.dados-proceso-label{
+    font-size: 20px;
+    padding: 5px;
+}
+.dados-proceso-label-opcoes{
+    font-size: 18px;
+    padding: 10px;
+
+}
+.dados__processo-adicionar-arquivo{
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="file"] {
+    background-color: var(--marron-secudario);
+    color: #725E60;
+    border: 2px solid #725E60;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+input[type=radio] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid var(--azul-primario)
+  }
+  
+  input[type=radio]:checked {
+    background-color: var(--laranja-primario);
+  }
+  
+.enviar_formulario{
+    background-color: #725E60;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    margin: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+      
+}
+
